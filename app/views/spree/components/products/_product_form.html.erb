@@ -7,15 +7,20 @@
 %>
 
 <%= form_for :order, url: populate_orders_path, html: schema_properties do |f| %>
-  <%= render 'spree/components/products/product_variants' %>
+  <% if product_variants_with_options.any? %>
+    <% sorted_option_types(@product).each_with_index do |option_type, i| %>
+      <div class="variant-selection"><%= render partial: 'spree/components/product_selection/option_type', :locals => { :option_type => option_type, :index => i } %></div>
+    <% end %>
+    <%= render 'spree/components/products/product_variants' %>
 
-  <% if @product.price_for(current_pricing_options) and !@product.price.nil? %>
-    <%= render 'spree/components/products/product_submit' %>
-  <% else %>
-    <div id="product-price">
-      <p data-js="price" itemprop="price">
-        <%= t('spree.product_not_available_in_this_currency') %>
-      </p>
-    </div>
+    <% if @product.price and !@product.price.nil? %>
+      <%= render 'spree/components/products/product_submit' %>
+    <% else %>
+      <div id="product-price">
+        <p data-js="price" itemprop="price">
+          <%= t('spree.product_not_available_in_this_currency') %>
+        </p>
+      </div>
+    <% end %>
   <% end %>
 <% end %>

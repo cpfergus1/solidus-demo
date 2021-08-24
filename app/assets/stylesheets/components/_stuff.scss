@@ -358,7 +358,7 @@
 
   &-row {
     margin-bottom: 4rem;
-  
+
     @media (min-width:900px) {
       display: flex;
       margin-bottom: 8rem;
@@ -367,7 +367,7 @@
 
   &__description {
     margin-bottom: 3rem;
-  
+
     @media (min-width:900px) {
       padding-right: 4rem;
       width: 60%;
@@ -446,4 +446,8 @@
   .horizontal-input-group__action {
     min-width: 70%;
   }
+}
+
+.d-hide {
+  display: none;
 }

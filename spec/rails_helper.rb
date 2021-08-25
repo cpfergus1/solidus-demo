@@ -38,6 +38,10 @@ end
 # Using Capybara
 require 'capybara/rspec'
 require 'capybara/apparition'
+Capybara.register_driver :apparition do |app|
+  Capybara::Apparition::Driver.new(app, { js_errors: false })
+end
+
 Capybara.javascript_driver = :apparition
 Capybara.server = :puma, { Silent: true } # A fix for rspec/rspec-rails#1897
 
@@ -55,6 +59,10 @@ RSpec.configure do |config|
 
   # You can uncomment this line to turn off ActiveRecord support entirely.
   # config.use_active_record = false
+
+  config.after(:each) do
+    Capybara.use_default_driver
+  end
 
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and

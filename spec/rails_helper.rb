@@ -41,6 +41,7 @@ require 'capybara/apparition'
 Capybara.register_driver :apparition_docker_friendly do |app|
   opts = {
     headless: true,
+    js_errors: false,
     browser_options: [
       :no_sandbox,
       :disable_gpu,
@@ -66,6 +67,10 @@ RSpec.configure do |config|
 
   # You can uncomment this line to turn off ActiveRecord support entirely.
   # config.use_active_record = false
+
+  config.after(:each) do
+    Capybara.use_default_driver
+  end
 
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and

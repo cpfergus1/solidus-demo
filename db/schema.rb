@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_30_102911) do
+ActiveRecord::Schema.define(version: 2021_08_31_144018) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -544,6 +544,7 @@ ActiveRecord::Schema.define(version: 2020_10_30_102911) do
     t.string "meta_title"
     t.string "sample_indicator_id"
     t.datetime "discontinue_on"
+    t.boolean "featured", default: false
     t.index ["available_on"], name: "index_spree_products_on_available_on"
     t.index ["deleted_at"], name: "index_spree_products_on_deleted_at"
     t.index ["name"], name: "index_spree_products_on_name"

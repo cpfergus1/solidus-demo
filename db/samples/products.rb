@@ -30,7 +30,8 @@ products = [
     weight: 0.5,
     height: 20,
     width: 10,
-    depth: 5
+    depth: 5,
+    featured: true
   },
   {
     name: "Solidus Long Sleeve",
@@ -52,7 +53,8 @@ products = [
     weight: 0.5,
     height: 20,
     width: 10,
-    depth: 5
+    depth: 5,
+    featured: true
   },
   {
     name: "Solidus Snapback Cap",
@@ -63,7 +65,8 @@ products = [
     weight: 0.5,
     height: 5,
     width: 5,
-    depth: 5
+    depth: 5,
+    featured: true
   },
   {
     name: "Solidus Hoodie Zip",
@@ -74,7 +77,8 @@ products = [
     weight: 1,
     height: 20,
     width: 10,
-    depth: 5
+    depth: 5,
+    featured: true
   },
   {
     name: "Ruby Hoodie",
@@ -96,7 +100,8 @@ products = [
     weight: 0.8,
     height: 20,
     width: 10,
-    depth: 5
+    depth: 5,
+    featured: true
   },
   {
     name: "Ruby Polo",
@@ -129,7 +134,8 @@ products = [
     weight: 1,
     height: 5,
     width: 5,
-    depth: 5
+    depth: 5,
+    featured: true
   },
   {
     name: "Solidus Tote",
@@ -151,7 +157,8 @@ products = [
     weight: 0.5,
     height: 20,
     width: 10,
-    depth: 5
+    depth: 5,
+    featured: true
   }
 ]
 

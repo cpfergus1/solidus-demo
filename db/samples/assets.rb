@@ -91,7 +91,7 @@ images = {
 }
 
 products[:solidus_monogram_tshirt].reload.variants.each do |variant|
-  color = variant.option_value("clothing-color").downcase
+  color = variant.option_value("clothing-color")
   main_image = image("solidus_monogram_tshirt_#{color}", "jpg")
   File.open(main_image) do |f|
     variant.images.create!(attachment: f)
@@ -99,7 +99,7 @@ products[:solidus_monogram_tshirt].reload.variants.each do |variant|
 end
 
 products[:solidus_logo_tshirt].reload.variants.each do |variant|
-  color = variant.option_value("clothing-color").downcase
+  color = variant.option_value("clothing-color")
   main_image = image("solidus_logo_tshirt_#{color}", "jpg")
   File.open(main_image) do |f|
     variant.images.create!(attachment: f)
@@ -107,7 +107,7 @@ products[:solidus_logo_tshirt].reload.variants.each do |variant|
 end
 
 products[:ruby_tshirt].reload.variants.each do |variant|
-  color = variant.option_value("clothing-color").downcase
+  color = variant.option_value("clothing-color")
   main_image = image("ruby_tshirt_#{color}", "jpg")
   File.open(main_image) do |f|
     variant.images.create!(attachment: f)
@@ -115,7 +115,7 @@ products[:ruby_tshirt].reload.variants.each do |variant|
 end
 
 products[:solidus_logo_hoodie].reload.variants.each do |variant|
-  color = variant.option_value("clothing-color").downcase
+  color = variant.option_value("clothing-color")
   main_image = image("solidus_logo_hoodie_#{color}", "jpg")
   File.open(main_image) do |f|
     variant.images.create!(attachment: f)
@@ -123,7 +123,7 @@ products[:solidus_logo_hoodie].reload.variants.each do |variant|
 end
 
 products[:solidus_monogram_hoodie].reload.variants.each do |variant|
-  color = variant.option_value("clothing-color").downcase
+  color = variant.option_value("clothing-color")
   main_image = image("solidus_monogram_hoodie_#{color}", "jpg")
   File.open(main_image) do |f|
     variant.images.create!(attachment: f)

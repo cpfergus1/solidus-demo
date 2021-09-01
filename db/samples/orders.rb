@@ -34,7 +34,7 @@ orders[0].line_items.create!(
 )
 
 orders[1].line_items.create!(
-  variant: Spree::Product.find_by!(name: "Solidus Snapback Cap").master,
+  variant: Spree::Product.find_by!(name: "Developers Cap").master,
   quantity: 1,
   price: 22.99
 )

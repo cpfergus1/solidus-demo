@@ -55,17 +55,6 @@ products = [
     depth: 5
   },
   {
-    name: "Solidus Snapback Cap",
-    tax_category: tax_category,
-    shipping_category: shipping_category,
-    price: 15.99,
-    eur_price: 14,
-    weight: 0.5,
-    height: 5,
-    width: 5,
-    depth: 5
-  },
-  {
     name: "Monogram Hoodie",
     tax_category: tax_category,
     shipping_category: shipping_category,
